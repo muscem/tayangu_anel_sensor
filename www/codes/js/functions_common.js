@@ -309,6 +309,17 @@ function set_work_order(){
 
 
 
+// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+//
+function onDeviceReady() {
+	// Now safe to use the PhoneGap API
+	//alert("Device is ready");
+	//$.support.cors=true;
+
+	document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+	document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+
+}
 
 
 
@@ -316,7 +327,6 @@ function set_work_order(){
 
 
 
-document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 
 function onVolumeDownKeyDown() {
     // Handle the volume down button
@@ -324,7 +334,7 @@ function onVolumeDownKeyDown() {
 }
 
 
-document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+
 
 function onVolumeUpKeyDown() {
     // Handle the volume up button
@@ -433,34 +443,7 @@ var elementsName={
 
 
 
-// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-//
-function onDeviceReady() {
-	// Now safe to use the PhoneGap API
-	//alert("Device is ready");
-	//$.support.cors=true;
 
-	
-	xmlDataSendType="GET";
-	siteUrlAdress="http://www.tayangu.com.tr/anel";
-	//show_storaged_data();
-	
-	
-/*
-	find_page_number();
-	get_user_prefs();
-	user_control();
-	write_new_language_on_page();
-	on_start_this_page();//Her sayfanın kendi başlangıç kodunun olduğu kod
-	
-*/
-
-
-	//startAllPagesWithThis();
-	
-	
-	/*show_dev();*/
-}
 
 
 /*function show_dev(){
