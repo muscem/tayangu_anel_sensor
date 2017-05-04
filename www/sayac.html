@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>anel</title>
+<link rel="stylesheet" href="codes/css/jquery-ui.css">
+<link rel="stylesheet" href="codes/css/mycssframework.css">
+<link rel="stylesheet" href="codes/css/main.css">
+<script src="codes/js/jquery.js"></script>
+<script src="codes/js/jquery-ui.js"></script>
+<script src="codes/js/functions.js"></script>
+<script src="codes/js/functions_common.js"></script>
+
+<style>
+/*div{
+	border:1px solid #000;
+}*/
+</style>
+
+<script>
+function onMainPageLoad(){
+	//on_page_load();
+	$("#cell-name-label").html(get_storaged_data("cellName"));
+	$("#work-order-label").html(get_storaged_data("workOrderName"));
+	startTime();	
+}
+function goto_index(){
+	/*set_storaged_data("cell", "");
+	set_storaged_data("workorder", "");*/
+	redirect_page("index.html");
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time-label').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+function say(){
+	$("#count-label").html($("#count-label").html()*1+1);
+}
+</script>
+</head>
+<body onLoad="onMainPageLoad();">
+<div id="wrapper" class="unselectable">
+    <div class="grid-100 content-center">
+	    <div class="grid2-30" style="margin:0px 35%;">
+    		<img src="images/anel-logo.jpg" width="100%">
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="grid-100">
+    	<div class="info-part-3">
+        	<span id="cell-name-label" class="info-part-grid-1"></span> 
+            <span id="work-order-label" class="info-part-grid-1"></span>
+            <span id="time-label" class="info-part-grid-2"></span>
+        </div>
+    </div>
+    
+    
+    <div class="grid-100">
+    	<div class="info-part-4">
+        	<span id="count-label">0</span>
+        </div>
+    </div>
+    
+    <div class="grid-100">
+        <div class="info-part-2" onClick="goto_index();">DURDUR
+        </div>
+    </div>
+    
+    
+    <div class="grid-100" onClick="say();">say</div>
+    
+
+
+</div>
+</body>
+</html>

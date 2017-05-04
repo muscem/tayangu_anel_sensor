@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>anel</title>
+<link rel="stylesheet" href="codes/css/jquery-ui.css">
+<link rel="stylesheet" href="codes/css/mycssframework.css">
+<link rel="stylesheet" href="codes/css/main.css">
+<script src="codes/js/jquery.js"></script>
+<script src="codes/js/jquery-ui.js"></script>
+<script src="codes/js/functions.js"></script>
+<script src="codes/js/functions_common.js"></script>
+
+<style>
+/*div{
+	border:1px solid #000;
+}*/
+</style>
+
+<script>
+function onMainPageLoad(){
+	//on_page_load();
+	get_cells_list();
+}
+function yap(){
+	//$("#cell-name").val("3").attr("selected", true);
+}
+
+
+function goto_sayac(){
+	/*set_storaged_data("cell", $("#cell-name :selected").text());
+	set_storaged_data("workOrder", $("#work-order :selected").text());*/
+	redirect_page("sayac.html");
+}
+</script>
+</head>
+<body onLoad="onMainPageLoad();">
+<div id="wrapper" class="unselectable">
+
+<!--<a href="#" onClick="yap();">Yap</a>
+<a href="#" onClick="adda();">Ekle</a>-->
+    <div class="grid-100 content-center">
+	    <div class="grid2-30" style="margin:0px 35%;">
+    		<img src="images/anel-logo.jpg" width="100%">
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="grid-100">
+    	<div class="info-part">
+            <div class="grid-20">
+                Hücre Adı :
+            </div>
+            <div class="margin-left-5">
+                <select name="cell-name" id="cell-name" class="form-element-1" onChange="get_work_orders_list();">
+                <option value="1">1</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="grid-100">
+	    <div class="info-part">
+            <div class="grid-20">
+                İş Emri :
+            </div>
+            <div class="margin-left-5">
+            	<input type="text" name="work-no" id="work-no" />
+                <select name="work-order" id="work-order" class="form-element-1" onChange="set_work_order();" style="display:none">
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="grid-100">
+    	<div class="info-part">
+            <div class="grid-100">
+                Kontrolcüler :
+                <img src="images/plus-green.png" class="info-part-logo margin-left-5" onClick="add_controller()">
+            </div>
+            <div class="grid-100" id="controller-list">
+            </div>
+        </div>
+        
+    </div>
+        
+    <div class="grid-100">
+    	<div class="info-part">
+            <div class="grid-100">
+                Çalışanlar :
+                <img src="images/plus-green.png" class="info-part-logo margin-left-5" onClick="add_worker()">
+            </div>
+            <div class="grid-100" id="worker-list">
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="grid-100">
+        <div class="info-part-2" onClick="goto_sayac();">BAŞLA
+        </div>
+    </div>
+    
+    
+    <div class="grid-100 grid2h-20"></div>
+    
+
+
+</div>
+<div id="volume">0</div>
+<input type="text" id="serverip" name="serverip" value="http://192.168.2.30/works/an-el/count-sensor/server">
+<input type="button" value="IP değiştir" onClick="changeip();">
+</body>
+</html>

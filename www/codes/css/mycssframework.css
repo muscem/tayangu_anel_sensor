@@ -1,0 +1,1016 @@
+/* Baslangiç Gizle Göster sinifi */
+/* version 1.0 */
+.hide{
+	display:none;
+}
+.show{
+	display:inherit;
+}
+.middle{
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+.content-left{
+	text-align:left;
+}
+.content-center{
+	text-align:center;
+}
+.content-right{
+	text-align:right;
+}
+/* Bitis Gizle Göster sinifi */
+
+
+
+.unselectable{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;
+	-o-user-select:none;
+}
+
+
+
+
+
+
+
+/* Baslangiç - Grid kodlari */
+.grid{
+	float:left;
+	display:inherit;
+}
+.grid-0{};
+.grid-1{width:1%;}
+.grid-2{width:2%;}
+.grid-3{width:3%;}
+.grid-4{width:4%;}
+.grid-5{width:5%;}
+.grid-6{width:6%;}
+.grid-7{width:7%;}
+.grid-8{width:8%;}
+.grid-9{width:9%;}
+.grid-10{width:10%;}
+.grid-11{width:11%;}
+.grid-12{width:12%;}
+.grid-13{width:13%;}
+.grid-14{width:14%;}
+.grid-15{width:15%;}
+.grid-16{width:16%;}
+.grid-17{width:17%;}
+.grid-18{width:18%;}
+.grid-19{width:19%;}
+.grid-20{width:20%;}
+.grid-21{width:21%;}
+.grid-22{width:22%;}
+.grid-23{width:23%;}
+.grid-24{width:24%;}
+.grid-25{width:25%;}
+.grid-26{width:26%;}
+.grid-27{width:27%;}
+.grid-28{width:28%;}
+.grid-29{width:29%;}
+.grid-30{width:30%;}
+.grid-31{width:31%;}
+.grid-32{width:32%;}
+.grid-33{width:33%;}
+.grid-34{width:34%;}
+.grid-35{width:35%;}
+.grid-36{width:36%;}
+.grid-37{width:37%;}
+.grid-38{width:38%;}
+.grid-39{width:39%;}
+.grid-40{width:40%;}
+.grid-41{width:41%;}
+.grid-42{width:42%;}
+.grid-43{width:43%;}
+.grid-44{width:44%;}
+.grid-45{width:45%;}
+.grid-46{width:46%;}
+.grid-47{width:47%;}
+.grid-48{width:48%;}
+.grid-49{width:49%;}
+.grid-50{width:50%;}
+.grid-51{width:51%;}
+.grid-52{width:52%;}
+.grid-53{width:53%;}
+.grid-54{width:54%;}
+.grid-55{width:55%;}
+.grid-56{width:56%;}
+.grid-57{width:57%;}
+.grid-58{width:58%;}
+.grid-59{width:59%;}
+.grid-60{width:60%;}
+.grid-61{width:61%;}
+.grid-62{width:62%;}
+.grid-63{width:63%;}
+.grid-64{width:64%;}
+.grid-65{width:65%;}
+.grid-66{width:66%;}
+.grid-67{width:67%;}
+.grid-68{width:68%;}
+.grid-69{width:69%;}
+.grid-70{width:70%;}
+.grid-71{width:71%;}
+.grid-72{width:72%;}
+.grid-73{width:73%;}
+.grid-74{width:74%;}
+.grid-75{width:75%;}
+.grid-76{width:76%;}
+.grid-77{width:77%;}
+.grid-78{width:78%;}
+.grid-79{width:79%;}
+.grid-80{width:80%;}
+.grid-81{width:81%;}
+.grid-82{width:82%;}
+.grid-83{width:83%;}
+.grid-84{width:84%;}
+.grid-85{width:85%;}
+.grid-86{width:86%;}
+.grid-87{width:87%;}
+.grid-88{width:88%;}
+.grid-89{width:89%;}
+.grid-90{width:90%;}
+.grid-91{width:91%;}
+.grid-92{width:92%;}
+.grid-93{width:93%;}
+.grid-94{width:94%;}
+.grid-95{width:95%;}
+.grid-96{width:96%;}
+.grid-97{width:97%;}
+.grid-98{width:98%;}
+.grid-99{width:99%;}
+.grid-100{width:100%;}
+
+.grid-0, .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-17, .grid-18, .grid-19, .grid-20, .grid-21, .grid-22, .grid-23, .grid-24, .grid-25, .grid-26, .grid-27, .grid-28, .grid-29, .grid-30, .grid-31, .grid-32, .grid-33, .grid-34, .grid-35, .grid-36, .grid-37, .grid-38, .grid-39, .grid-40, .grid-41, .grid-42, .grid-43, .grid-44, .grid-45, .grid-46, .grid-47, .grid-48, .grid-49, .grid-50, .grid-51, .grid-52, .grid-53, .grid-54, .grid-55, .grid-56, .grid-57, .grid-58, .grid-59, .grid-60, .grid-61, .grid-62, .grid-63, .grid-64,  .grid-65, .grid-66, .grid-67, .grid-68, .grid-69, .grid-70, .grid-71, .grid-72, .grid-73, .grid-74, .grid-75, .grid-76, .grid-77, .grid-78, .grid-79, .grid-80, .grid-81, grid-82, .grid-83, .grid-84, .grid-85, .grid-86, .grid-87, .grid-88, .grid-89, .grid-90, .grid-91, .grid-92, .grid-93, .grid-94, .grid-95, .grid-96, .grid-97, .grid-98, .grid-99, .grid-100 {
+	float:left;
+	overflow:hidden;
+	/*display:inline;*/
+	/*display:inherit;*/
+	/*border:solid 1px #000000;*/
+}
+
+@media screen and (max-width:768px) {
+.grid-0, .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-17, .grid-18, .grid-19, .grid-20, .grid-21, .grid-22, .grid-23, .grid-24, .grid-25, .grid-26, .grid-27, .grid-28, .grid-29, .grid-30, .grid-31, .grid-32, .grid-33, .grid-34, .grid-35, .grid-36, .grid-37, .grid-38, .grid-39, .grid-40, .grid-41, .grid-42, .grid-43, .grid-44, .grid-45, .grid-46, .grid-47, .grid-48, .grid-49, .grid-50, .grid-51, .grid-52, .grid-53, .grid-54, .grid-55, .grid-56, .grid-57, .grid-58, .grid-59, .grid-60, .grid-61, .grid-62, .grid-63, .grid-64,  .grid-65, .grid-66, .grid-67, .grid-68, .grid-69, .grid-70, .grid-71, .grid-72, .grid-73, .grid-74, .grid-75, .grid-76, .grid-77, .grid-78, .grid-79, .grid-80, .grid-81, grid-82, .grid-83, .grid-84, .grid-85, .grid-86, .grid-87, .grid-88, .grid-89, .grid-90, .grid-91, .grid-92, .grid-93, .grid-94, .grid-95, .grid-96, .grid-97, .grid-98, .grid-99, .grid-100 {
+	float:none;
+	width:100%;
+	/*overflow:auto;*/
+}
+}
+/* Bitis - Grid kodlari */
+
+
+/* Baslangiç - Grid2 kodlari */
+/* Ekranýn geniþliðine baðlý olarak deðiþmiyor. */
+/* Sürekli ortalama için. */
+
+.grid2-0{};
+.grid2-1{width:1%;}
+.grid2-2{width:2%;}
+.grid2-3{width:3%;}
+.grid2-4{width:4%;}
+.grid2-5{width:5%;}
+.grid2-6{width:6%;}
+.grid2-7{width:7%;}
+.grid2-8{width:8%;}
+.grid2-9{width:9%;}
+.grid2-10{width:10%;}
+.grid2-11{width:11%;}
+.grid2-12{width:12%;}
+.grid2-13{width:13%;}
+.grid2-14{width:14%;}
+.grid2-15{width:15%;}
+.grid2-16{width:16%;}
+.grid2-17{width:17%;}
+.grid2-18{width:18%;}
+.grid2-19{width:19%;}
+.grid2-20{width:20%;}
+.grid2-21{width:21%;}
+.grid2-22{width:22%;}
+.grid2-23{width:23%;}
+.grid2-24{width:24%;}
+.grid2-25{width:25%;}
+.grid2-26{width:26%;}
+.grid2-27{width:27%;}
+.grid2-28{width:28%;}
+.grid2-29{width:29%;}
+.grid2-30{width:30%;}
+.grid2-31{width:31%;}
+.grid2-32{width:32%;}
+.grid2-33{width:33%;}
+.grid2-34{width:34%;}
+.grid2-35{width:35%;}
+.grid2-36{width:36%;}
+.grid2-37{width:37%;}
+.grid2-38{width:38%;}
+.grid2-39{width:39%;}
+.grid2-40{width:40%;}
+.grid2-41{width:41%;}
+.grid2-42{width:42%;}
+.grid2-43{width:43%;}
+.grid2-44{width:44%;}
+.grid2-45{width:45%;}
+.grid2-46{width:46%;}
+.grid2-47{width:47%;}
+.grid2-48{width:48%;}
+.grid2-49{width:49%;}
+.grid2-50{width:50%;}
+.grid2-51{width:51%;}
+.grid2-52{width:52%;}
+.grid2-53{width:53%;}
+.grid2-54{width:54%;}
+.grid2-55{width:55%;}
+.grid2-56{width:56%;}
+.grid2-57{width:57%;}
+.grid2-58{width:58%;}
+.grid2-59{width:59%;}
+.grid2-60{width:60%;}
+.grid2-61{width:61%;}
+.grid2-62{width:62%;}
+.grid2-63{width:63%;}
+.grid2-64{width:64%;}
+.grid2-65{width:65%;}
+.grid2-66{width:66%;}
+.grid2-67{width:67%;}
+.grid2-68{width:68%;}
+.grid2-69{width:69%;}
+.grid2-70{width:70%;}
+.grid2-71{width:71%;}
+.grid2-72{width:72%;}
+.grid2-73{width:73%;}
+.grid2-74{width:74%;}
+.grid2-75{width:75%;}
+.grid2-76{width:76%;}
+.grid2-77{width:77%;}
+.grid2-78{width:78%;}
+.grid2-79{width:79%;}
+.grid2-80{width:80%;}
+.grid2-81{width:81%;}
+.grid2-82{width:82%;}
+.grid2-83{width:83%;}
+.grid2-84{width:84%;}
+.grid2-85{width:85%;}
+.grid2-86{width:86%;}
+.grid2-87{width:87%;}
+.grid2-88{width:88%;}
+.grid2-89{width:89%;}
+.grid2-90{width:90%;}
+.grid2-91{width:91%;}
+.grid2-92{width:92%;}
+.grid2-93{width:93%;}
+.grid2-94{width:94%;}
+.grid2-95{width:95%;}
+.grid2-96{width:96%;}
+.grid2-97{width:97%;}
+.grid2-98{width:98%;}
+.grid2-99{width:99%;}
+.grid2-100{width:100%;}
+
+
+.grid2-0, .grid2-1, .grid2-2, .grid2-3, .grid2-4, .grid2-5, .grid2-6, .grid2-7, .grid2-8, .grid2-9, .grid2-10, .grid2-11, .grid2-12, .grid2-13, .grid2-14, .grid2-15, .grid2-16, .grid2-17, .grid2-18, .grid2-19, .grid2-20, .grid2-21, .grid2-22, .grid2-23, .grid2-24, .grid2-25, .grid2-26, .grid2-27, .grid2-28, .grid2-29, .grid2-30, .grid2-31, .grid2-32, .grid2-33, .grid2-34, .grid2-35, .grid2-36, .grid2-37, .grid2-38, .grid2-39, .grid2-40, .grid2-41, .grid2-42, .grid2-43, .grid2-44, .grid2-45, .grid2-46, .grid2-47, .grid2-48, .grid2-49, .grid2-50, .grid2-51, .grid2-52, .grid2-53, .grid2-54, .grid2-55, .grid2-56, .grid2-57, .grid2-58, .grid2-59, .grid2-60, .grid2-61, .grid2-62, .grid2-63, .grid2-64,  .grid2-65, .grid2-66, .grid2-67, .grid2-68, .grid2-69, .grid2-70, .grid2-71, .grid2-72, .grid2-73, .grid2-74, .grid2-75, .grid2-76, .grid2-77, .grid2-78, .grid2-79, .grid2-80, .grid2-81, grid2-82, .grid2-83, .grid2-84, .grid2-85, .grid2-86, .grid2-87, .grid2-88, .grid2-89, .grid2-90, .grid2-91, .grid2-92, .grid2-93, .grid2-94, .grid2-95, .grid2-96, .grid2-97, .grid2-98, .grid2-99, .grid2-100 {
+	float:left;
+	overflow:auto;
+}
+
+.grid2h-0{height:0vw};
+.grid2h-01{height:0.1vw;}
+.grid2h-02{height:0.2vw;}
+.grid2h-03{height:0.3vw;}
+.grid2h-04{height:0.4vw;}
+.grid2h-05{height:0.5vw;}
+.grid2h-06{height:0.6vw;}
+.grid2h-07{height:0.7vw;}
+.grid2h-08{height:0.8vw;}
+.grid2h-09{height:0.9vw;}
+.grid2h-10{height:0.1vw;}
+.grid2h-11{height:1.1vw;}
+.grid2h-12{height:1.2vw;}
+.grid2h-13{height:1.3vw;}
+.grid2h-14{height:1.4vw;}
+.grid2h-15{height:1.5vw;}
+.grid2h-16{height:1.6vw;}
+.grid2h-17{height:1.7vw;}
+.grid2h-18{height:1.8vw;}
+.grid2h-19{height:1.9vw;}
+.grid2h-20{height:2.0vw;}
+.grid2h-21{height:2.1vw;}
+.grid2h-22{height:2.2vw;}
+.grid2h-23{height:2.3vw;}
+.grid2h-24{height:2.4vw;}
+.grid2h-25{height:2.5vw;}
+.grid2h-26{height:2.6vw;}
+.grid2h-27{height:2.7vw;}
+.grid2h-28{height:2.8vw;}
+.grid2h-29{height:2.9vw;}
+.grid2h-30{height:3.0vw;}
+.grid2h-31{height:3.1vw;}
+.grid2h-32{height:3.2vw;}
+.grid2h-33{height:3.3vw;}
+.grid2h-34{height:3.4vw;}
+.grid2h-35{height:3.5vw;}
+.grid2h-36{height:3.6vw;}
+.grid2h-37{height:3.7vw;}
+.grid2h-38{height:3.8vw;}
+.grid2h-39{height:3.9vw;}
+.grid2h-40{height:4.0vw;}
+.grid2h-41{height:4.1vw;}
+.grid2h-42{height:4.2vw;}
+.grid2h-43{height:4.3vw;}
+.grid2h-44{height:4.4vw;}
+.grid2h-45{height:4.5vw;}
+.grid2h-46{height:4.6vw;}
+.grid2h-47{height:4.7vw;}
+.grid2h-48{height:4.8vw;}
+.grid2h-49{height:4.9vw;}
+.grid2h-50{height:5.0vw;}
+.grid2h-51{height:5.1vw;}
+.grid2h-52{height:5.2vw;}
+.grid2h-53{height:5.3vw;}
+.grid2h-54{height:5.4vw;}
+.grid2h-55{height:5.5vw;}
+.grid2h-56{height:5.6vw;}
+.grid2h-57{height:5.7vw;}
+.grid2h-58{height:5.8vw;}
+.grid2h-59{height:5.9vw;}
+.grid2h-60{height:6.0vw;}
+.grid2h-61{height:6.1vw;}
+.grid2h-62{height:6.2vw;}
+.grid2h-63{height:6.3vw;}
+.grid2h-64{height:6.4vw;}
+.grid2h-65{height:6.5vw;}
+.grid2h-66{height:6.6vw;}
+.grid2h-67{height:6.7vw;}
+.grid2h-68{height:6.8vw;}
+.grid2h-69{height:6.9vw;}
+.grid2h-70{height:7.0vw;}
+.grid2h-71{height:7.1vw;}
+.grid2h-72{height:7.2vw;}
+.grid2h-73{height:7.3vw;}
+.grid2h-74{height:7.4vw;}
+.grid2h-75{height:7.5vw;}
+.grid2h-76{height:7.6vw;}
+.grid2h-77{height:7.7vw;}
+.grid2h-78{height:7.8vw;}
+.grid2h-79{height:7.9vw;}
+.grid2h-80{height:8.0vw;}
+.grid2h-81{height:8.1vw;}
+.grid2h-82{height:8.2vw;}
+.grid2h-83{height:8.3vw;}
+.grid2h-84{height:8.4vw;}
+.grid2h-85{height:8.5vw;}
+.grid2h-86{height:8.6vw;}
+.grid2h-87{height:8.7vw;}
+.grid2h-88{height:8.8vw;}
+.grid2h-89{height:8.9vw;}
+.grid2h-90{height:9.0vw;}
+.grid2h-91{height:9.1vw;}
+.grid2h-92{height:9.2vw;}
+.grid2h-93{height:9.3vw;}
+.grid2h-94{height:9.4vw;}
+.grid2h-95{height:9.5vw;}
+.grid2h-96{height:9.6vw;}
+.grid2h-97{height:9.7vw;}
+.grid2h-98{height:9.8vw;}
+.grid2h-99{height:9.9vw;}
+.grid2h-100{height:10.0vw;}
+/* Bitis - Grid2 kodlari */
+
+
+
+/*.margin-1{margin:1vw;}
+.margin-2{margin:2vw;}
+.margin-3{margin:3vw;}
+.margin-4{margin:4vw;}
+.margin-5{margin:5vw;}
+.margin-6{margin:6vw;}
+.margin-7{margin:7vw;}
+.margin-8{margin:8vw;}
+.margin-9{margin:9vw;}
+.margin-10{margin:10vw;}
+.margin-11{margin:11vw;}
+.margin-12{margin:12vw;}
+.margin-13{margin:13vw;}
+.margin-14{margin:14vw;}
+.margin-15{margin:15vw;}
+.margin-16{margin:16vw;}
+.margin-17{margin:17vw;}
+.margin-18{margin:18vw;}
+.margin-19{margin:19vw;}
+.margin-20{margin:20vw;}
+.margin-21{margin:21vw;}
+.margin-22{margin:22vw;}
+.margin-23{margin:23vw;}
+.margin-24{margin:24vw;}
+.margin-25{margin:25vw;}
+.margin-26{margin:26vw;}
+.margin-27{margin:27vw;}
+.margin-28{margin:28vw;}
+.margin-29{margin:29vw;}
+.margin-30{margin:30vw;}
+.margin-31{margin:31vw;}
+.margin-32{margin:32vw;}
+.margin-33{margin:33vw;}
+.margin-34{margin:34vw;}
+.margin-35{margin:35vw;}
+.margin-36{margin:36vw;}
+.margin-37{margin:37vw;}
+.margin-38{margin:38vw;}
+.margin-39{margin:39vw;}
+.margin-40{margin:40vw;}
+.margin-41{margin:41vw;}
+.margin-42{margin:42vw;}
+.margin-43{margin:43vw;}
+.margin-44{margin:44vw;}
+.margin-45{margin:45vw;}
+.margin-46{margin:46vw;}
+.margin-47{margin:47vw;}
+.margin-48{margin:48vw;}
+.margin-49{margin:49vw;}
+.margin-50{margin:50vw;}
+.margin-51{margin:51vw;}
+.margin-52{margin:52vw;}
+.margin-53{margin:53vw;}
+.margin-54{margin:54vw;}
+.margin-55{margin:55vw;}
+.margin-56{margin:56vw;}
+.margin-57{margin:57vw;}
+.margin-58{margin:58vw;}
+.margin-59{margin:59vw;}
+.margin-60{margin:60vw;}
+.margin-61{margin:61vw;}
+.margin-62{margin:62vw;}
+.margin-63{margin:63vw;}
+.margin-64{margin:64vw;}
+.margin-65{margin:65vw;}
+.margin-66{margin:66vw;}
+.margin-67{margin:67vw;}
+.margin-68{margin:68vw;}
+.margin-69{margin:69vw;}
+.margin-70{margin:70vw;}
+.margin-71{margin:71vw;}
+.margin-72{margin:72vw;}
+.margin-73{margin:73vw;}
+.margin-74{margin:74vw;}
+.margin-75{margin:75vw;}
+.margin-76{margin:76vw;}
+.margin-77{margin:77vw;}
+.margin-78{margin:78vw;}
+.margin-79{margin:79vw;}
+.margin-80{margin:80vw;}
+.margin-81{margin:81vw;}
+.margin-82{margin:82vw;}
+.margin-83{margin:83vw;}
+.margin-84{margin:84vw;}
+.margin-85{margin:85vw;}
+.margin-86{margin:86vw;}
+.margin-87{margin:87vw;}
+.margin-88{margin:88vw;}
+.margin-89{margin:89vw;}
+.margin-90{margin:90vw;}
+.margin-91{margin:91vw;}
+.margin-92{margin:92vw;}
+.margin-93{margin:93vw;}
+.margin-94{margin:94vw;}
+.margin-95{margin:95vw;}
+.margin-96{margin:96vw;}
+.margin-97{margin:97vw;}
+.margin-98{margin:98vw;}
+.margin-99{margin:99vw;}
+.margin-100{margin:100vw;}*/
+
+.margin-0 {margin:0%;}
+.margin-1 {margin:1%;}
+.margin-2 {margin:2%;}
+.margin-3 {margin:3%;}
+.margin-4 {margin:4%;}
+.margin-5 {margin:5%;}
+.margin-6 {margin:6%;}
+.margin-7 {margin:7%;}
+.margin-8 {margin:8%;}
+.margin-9 {margin:9%;}
+.margin-10 {margin:10%;}
+.margin-11 {margin:11%;}
+.margin-12 {margin:12%;}
+.margin-13 {margin:13%;}
+.margin-14 {margin:14%;}
+.margin-15 {margin:15%;}
+.margin-16 {margin:16%;}
+.margin-17 {margin:17%;}
+.margin-18 {margin:18%;}
+.margin-19 {margin:19%;}
+.margin-20 {margin:20%;}
+.margin-21 {margin:21%;}
+.margin-22 {margin:22%;}
+.margin-23 {margin:23%;}
+.margin-24 {margin:24%;}
+.margin-25 {margin:25%;}
+.margin-26 {margin:26%;}
+.margin-27 {margin:27%;}
+.margin-28 {margin:28%;}
+.margin-29 {margin:29%;}
+.margin-30 {margin:30%;}
+.margin-31 {margin:31%;}
+.margin-32 {margin:32%;}
+.margin-33 {margin:33%;}
+.margin-34 {margin:34%;}
+.margin-35 {margin:35%;}
+.margin-36 {margin:36%;}
+.margin-37 {margin:37%;}
+.margin-38 {margin:38%;}
+.margin-39 {margin:39%;}
+.margin-40 {margin:40%;}
+.margin-41 {margin:41%;}
+.margin-42 {margin:42%;}
+.margin-43 {margin:43%;}
+.margin-44 {margin:44%;}
+.margin-45 {margin:45%;}
+.margin-46 {margin:46%;}
+.margin-47 {margin:47%;}
+.margin-48 {margin:48%;}
+.margin-49 {margin:49%;}
+.margin-50 {margin:50%;}
+.margin-51 {margin:51%;}
+.margin-52 {margin:52%;}
+.margin-53 {margin:53%;}
+.margin-54 {margin:54%;}
+.margin-55 {margin:55%;}
+.margin-56 {margin:56%;}
+.margin-57 {margin:57%;}
+.margin-58 {margin:58%;}
+.margin-59 {margin:59%;}
+.margin-60 {margin:60%;}
+.margin-61 {margin:61%;}
+.margin-62 {margin:62%;}
+.margin-63 {margin:63%;}
+.margin-64 {margin:64%;}
+.margin-65 {margin:65%;}
+.margin-66 {margin:66%;}
+.margin-67 {margin:67%;}
+.margin-68 {margin:68%;}
+.margin-69 {margin:69%;}
+.margin-70 {margin:70%;}
+.margin-71 {margin:71%;}
+.margin-72 {margin:72%;}
+.margin-73 {margin:73%;}
+.margin-74 {margin:74%;}
+.margin-75 {margin:75%;}
+.margin-76 {margin:76%;}
+.margin-77 {margin:77%;}
+.margin-78 {margin:78%;}
+.margin-79 {margin:79%;}
+.margin-80 {margin:80%;}
+.margin-81 {margin:81%;}
+.margin-82 {margin:82%;}
+.margin-83 {margin:83%;}
+.margin-84 {margin:84%;}
+.margin-85 {margin:85%;}
+.margin-86 {margin:86%;}
+.margin-87 {margin:87%;}
+.margin-88 {margin:88%;}
+.margin-89 {margin:89%;}
+.margin-90 {margin:90%;}
+.margin-91 {margin:91%;}
+.margin-92 {margin:92%;}
+.margin-93 {margin:93%;}
+.margin-94 {margin:94%;}
+.margin-95 {margin:95%;}
+.margin-96 {margin:96%;}
+.margin-97 {margin:97%;}
+.margin-98 {margin:98%;}
+.margin-99 {margin:99%;}
+.margin-100 {margin:100%;}
+
+
+.margin-bottom-0 {margin-bottom:0%;}
+.margin-bottom-1 {margin-bottom:1%;}
+.margin-bottom-2 {margin-bottom:2%;}
+.margin-bottom-3 {margin-bottom:3%;}
+.margin-bottom-4 {margin-bottom:4%;}
+.margin-bottom-5 {margin-bottom:5%;}
+.margin-bottom-6 {margin-bottom:6%;}
+.margin-bottom-7 {margin-bottom:7%;}
+.margin-bottom-8 {margin-bottom:8%;}
+.margin-bottom-9 {margin-bottom:9%;}
+.margin-bottom-10 {margin-bottom:10%;}
+.margin-bottom-11 {margin-bottom:11%;}
+.margin-bottom-12 {margin-bottom:12%;}
+.margin-bottom-13 {margin-bottom:13%;}
+.margin-bottom-14 {margin-bottom:14%;}
+.margin-bottom-15 {margin-bottom:15%;}
+.margin-bottom-16 {margin-bottom:16%;}
+.margin-bottom-17 {margin-bottom:17%;}
+.margin-bottom-18 {margin-bottom:18%;}
+.margin-bottom-19 {margin-bottom:19%;}
+.margin-bottom-20 {margin-bottom:20%;}
+.margin-bottom-21 {margin-bottom:21%;}
+.margin-bottom-22 {margin-bottom:22%;}
+.margin-bottom-23 {margin-bottom:23%;}
+.margin-bottom-24 {margin-bottom:24%;}
+.margin-bottom-25 {margin-bottom:25%;}
+.margin-bottom-26 {margin-bottom:26%;}
+.margin-bottom-27 {margin-bottom:27%;}
+.margin-bottom-28 {margin-bottom:28%;}
+.margin-bottom-29 {margin-bottom:29%;}
+.margin-bottom-30 {margin-bottom:30%;}
+.margin-bottom-31 {margin-bottom:31%;}
+.margin-bottom-32 {margin-bottom:32%;}
+.margin-bottom-33 {margin-bottom:33%;}
+.margin-bottom-34 {margin-bottom:34%;}
+.margin-bottom-35 {margin-bottom:35%;}
+.margin-bottom-36 {margin-bottom:36%;}
+.margin-bottom-37 {margin-bottom:37%;}
+.margin-bottom-38 {margin-bottom:38%;}
+.margin-bottom-39 {margin-bottom:39%;}
+.margin-bottom-40 {margin-bottom:40%;}
+.margin-bottom-41 {margin-bottom:41%;}
+.margin-bottom-42 {margin-bottom:42%;}
+.margin-bottom-43 {margin-bottom:43%;}
+.margin-bottom-44 {margin-bottom:44%;}
+.margin-bottom-45 {margin-bottom:45%;}
+.margin-bottom-46 {margin-bottom:46%;}
+.margin-bottom-47 {margin-bottom:47%;}
+.margin-bottom-48 {margin-bottom:48%;}
+.margin-bottom-49 {margin-bottom:49%;}
+.margin-bottom-50 {margin-bottom:50%;}
+.margin-bottom-51 {margin-bottom:51%;}
+.margin-bottom-52 {margin-bottom:52%;}
+.margin-bottom-53 {margin-bottom:53%;}
+.margin-bottom-54 {margin-bottom:54%;}
+.margin-bottom-55 {margin-bottom:55%;}
+.margin-bottom-56 {margin-bottom:56%;}
+.margin-bottom-57 {margin-bottom:57%;}
+.margin-bottom-58 {margin-bottom:58%;}
+.margin-bottom-59 {margin-bottom:59%;}
+.margin-bottom-60 {margin-bottom:60%;}
+.margin-bottom-61 {margin-bottom:61%;}
+.margin-bottom-62 {margin-bottom:62%;}
+.margin-bottom-63 {margin-bottom:63%;}
+.margin-bottom-64 {margin-bottom:64%;}
+.margin-bottom-65 {margin-bottom:65%;}
+.margin-bottom-66 {margin-bottom:66%;}
+.margin-bottom-67 {margin-bottom:67%;}
+.margin-bottom-68 {margin-bottom:68%;}
+.margin-bottom-69 {margin-bottom:69%;}
+.margin-bottom-70 {margin-bottom:70%;}
+.margin-bottom-71 {margin-bottom:71%;}
+.margin-bottom-72 {margin-bottom:72%;}
+.margin-bottom-73 {margin-bottom:73%;}
+.margin-bottom-74 {margin-bottom:74%;}
+.margin-bottom-75 {margin-bottom:75%;}
+.margin-bottom-76 {margin-bottom:76%;}
+.margin-bottom-77 {margin-bottom:77%;}
+.margin-bottom-78 {margin-bottom:78%;}
+.margin-bottom-79 {margin-bottom:79%;}
+.margin-bottom-80 {margin-bottom:80%;}
+.margin-bottom-81 {margin-bottom:81%;}
+.margin-bottom-82 {margin-bottom:82%;}
+.margin-bottom-83 {margin-bottom:83%;}
+.margin-bottom-84 {margin-bottom:84%;}
+.margin-bottom-85 {margin-bottom:85%;}
+.margin-bottom-86 {margin-bottom:86%;}
+.margin-bottom-87 {margin-bottom:87%;}
+.margin-bottom-88 {margin-bottom:88%;}
+.margin-bottom-89 {margin-bottom:89%;}
+.margin-bottom-90 {margin-bottom:90%;}
+.margin-bottom-91 {margin-bottom:91%;}
+.margin-bottom-92 {margin-bottom:92%;}
+.margin-bottom-93 {margin-bottom:93%;}
+.margin-bottom-94 {margin-bottom:94%;}
+.margin-bottom-95 {margin-bottom:95%;}
+.margin-bottom-96 {margin-bottom:96%;}
+.margin-bottom-97 {margin-bottom:97%;}
+.margin-bottom-98 {margin-bottom:98%;}
+.margin-bottom-99 {margin-bottom:99%;}
+.margin-bottom-100 {margin-bottom:100%;}
+
+
+.margin-left-0 {margin-left:0%;}
+.margin-left-1 {margin-left:1%;}
+.margin-left-2 {margin-left:2%;}
+.margin-left-3 {margin-left:3%;}
+.margin-left-4 {margin-left:4%;}
+.margin-left-5 {margin-left:5%;}
+.margin-left-6 {margin-left:6%;}
+.margin-left-7 {margin-left:7%;}
+.margin-left-8 {margin-left:8%;}
+.margin-left-9 {margin-left:9%;}
+.margin-left-10 {margin-left:10%;}
+.margin-left-11 {margin-left:11%;}
+.margin-left-12 {margin-left:12%;}
+.margin-left-13 {margin-left:13%;}
+.margin-left-14 {margin-left:14%;}
+.margin-left-15 {margin-left:15%;}
+.margin-left-16 {margin-left:16%;}
+.margin-left-17 {margin-left:17%;}
+.margin-left-18 {margin-left:18%;}
+.margin-left-19 {margin-left:19%;}
+.margin-left-20 {margin-left:20%;}
+.margin-left-21 {margin-left:21%;}
+.margin-left-22 {margin-left:22%;}
+.margin-left-23 {margin-left:23%;}
+.margin-left-24 {margin-left:24%;}
+.margin-left-25 {margin-left:25%;}
+.margin-left-26 {margin-left:26%;}
+.margin-left-27 {margin-left:27%;}
+.margin-left-28 {margin-left:28%;}
+.margin-left-29 {margin-left:29%;}
+.margin-left-30 {margin-left:30%;}
+.margin-left-31 {margin-left:31%;}
+.margin-left-32 {margin-left:32%;}
+.margin-left-33 {margin-left:33%;}
+.margin-left-34 {margin-left:34%;}
+.margin-left-35 {margin-left:35%;}
+.margin-left-36 {margin-left:36%;}
+.margin-left-37 {margin-left:37%;}
+.margin-left-38 {margin-left:38%;}
+.margin-left-39 {margin-left:39%;}
+.margin-left-40 {margin-left:40%;}
+.margin-left-41 {margin-left:41%;}
+.margin-left-42 {margin-left:42%;}
+.margin-left-43 {margin-left:43%;}
+.margin-left-44 {margin-left:44%;}
+.margin-left-45 {margin-left:45%;}
+.margin-left-46 {margin-left:46%;}
+.margin-left-47 {margin-left:47%;}
+.margin-left-48 {margin-left:48%;}
+.margin-left-49 {margin-left:49%;}
+.margin-left-50 {margin-left:50%;}
+.margin-left-51 {margin-left:51%;}
+.margin-left-52 {margin-left:52%;}
+.margin-left-53 {margin-left:53%;}
+.margin-left-54 {margin-left:54%;}
+.margin-left-55 {margin-left:55%;}
+.margin-left-56 {margin-left:56%;}
+.margin-left-57 {margin-left:57%;}
+.margin-left-58 {margin-left:58%;}
+.margin-left-59 {margin-left:59%;}
+.margin-left-60 {margin-left:60%;}
+.margin-left-61 {margin-left:61%;}
+.margin-left-62 {margin-left:62%;}
+.margin-left-63 {margin-left:63%;}
+.margin-left-64 {margin-left:64%;}
+.margin-left-65 {margin-left:65%;}
+.margin-left-66 {margin-left:66%;}
+.margin-left-67 {margin-left:67%;}
+.margin-left-68 {margin-left:68%;}
+.margin-left-69 {margin-left:69%;}
+.margin-left-70 {margin-left:70%;}
+.margin-left-71 {margin-left:71%;}
+.margin-left-72 {margin-left:72%;}
+.margin-left-73 {margin-left:73%;}
+.margin-left-74 {margin-left:74%;}
+.margin-left-75 {margin-left:75%;}
+.margin-left-76 {margin-left:76%;}
+.margin-left-77 {margin-left:77%;}
+.margin-left-78 {margin-left:78%;}
+.margin-left-79 {margin-left:79%;}
+.margin-left-80 {margin-left:80%;}
+.margin-left-81 {margin-left:81%;}
+.margin-left-82 {margin-left:82%;}
+.margin-left-83 {margin-left:83%;}
+.margin-left-84 {margin-left:84%;}
+.margin-left-85 {margin-left:85%;}
+.margin-left-86 {margin-left:86%;}
+.margin-left-87 {margin-left:87%;}
+.margin-left-88 {margin-left:88%;}
+.margin-left-89 {margin-left:89%;}
+.margin-left-90 {margin-left:90%;}
+.margin-left-91 {margin-left:91%;}
+.margin-left-92 {margin-left:92%;}
+.margin-left-93 {margin-left:93%;}
+.margin-left-94 {margin-left:94%;}
+.margin-left-95 {margin-left:95%;}
+.margin-left-96 {margin-left:96%;}
+.margin-left-97 {margin-left:97%;}
+.margin-left-98 {margin-left:98%;}
+.margin-left-99 {margin-left:99%;}
+.margin-left-100 {margin-left:100%;}
+
+
+.margin-right-0 {margin-right:0%;}
+.margin-right-1 {margin-right:1%;}
+.margin-right-2 {margin-right:2%;}
+.margin-right-3 {margin-right:3%;}
+.margin-right-4 {margin-right:4%;}
+.margin-right-5 {margin-right:5%;}
+.margin-right-6 {margin-right:6%;}
+.margin-right-7 {margin-right:7%;}
+.margin-right-8 {margin-right:8%;}
+.margin-right-9 {margin-right:9%;}
+.margin-right-10 {margin-right:10%;}
+.margin-right-11 {margin-right:11%;}
+.margin-right-12 {margin-right:12%;}
+.margin-right-13 {margin-right:13%;}
+.margin-right-14 {margin-right:14%;}
+.margin-right-15 {margin-right:15%;}
+.margin-right-16 {margin-right:16%;}
+.margin-right-17 {margin-right:17%;}
+.margin-right-18 {margin-right:18%;}
+.margin-right-19 {margin-right:19%;}
+.margin-right-20 {margin-right:20%;}
+.margin-right-21 {margin-right:21%;}
+.margin-right-22 {margin-right:22%;}
+.margin-right-23 {margin-right:23%;}
+.margin-right-24 {margin-right:24%;}
+.margin-right-25 {margin-right:25%;}
+.margin-right-26 {margin-right:26%;}
+.margin-right-27 {margin-right:27%;}
+.margin-right-28 {margin-right:28%;}
+.margin-right-29 {margin-right:29%;}
+.margin-right-30 {margin-right:30%;}
+.margin-right-31 {margin-right:31%;}
+.margin-right-32 {margin-right:32%;}
+.margin-right-33 {margin-right:33%;}
+.margin-right-34 {margin-right:34%;}
+.margin-right-35 {margin-right:35%;}
+.margin-right-36 {margin-right:36%;}
+.margin-right-37 {margin-right:37%;}
+.margin-right-38 {margin-right:38%;}
+.margin-right-39 {margin-right:39%;}
+.margin-right-40 {margin-right:40%;}
+.margin-right-41 {margin-right:41%;}
+.margin-right-42 {margin-right:42%;}
+.margin-right-43 {margin-right:43%;}
+.margin-right-44 {margin-right:44%;}
+.margin-right-45 {margin-right:45%;}
+.margin-right-46 {margin-right:46%;}
+.margin-right-47 {margin-right:47%;}
+.margin-right-48 {margin-right:48%;}
+.margin-right-49 {margin-right:49%;}
+.margin-right-50 {margin-right:50%;}
+.margin-right-51 {margin-right:51%;}
+.margin-right-52 {margin-right:52%;}
+.margin-right-53 {margin-right:53%;}
+.margin-right-54 {margin-right:54%;}
+.margin-right-55 {margin-right:55%;}
+.margin-right-56 {margin-right:56%;}
+.margin-right-57 {margin-right:57%;}
+.margin-right-58 {margin-right:58%;}
+.margin-right-59 {margin-right:59%;}
+.margin-right-60 {margin-right:60%;}
+.margin-right-61 {margin-right:61%;}
+.margin-right-62 {margin-right:62%;}
+.margin-right-63 {margin-right:63%;}
+.margin-right-64 {margin-right:64%;}
+.margin-right-65 {margin-right:65%;}
+.margin-right-66 {margin-right:66%;}
+.margin-right-67 {margin-right:67%;}
+.margin-right-68 {margin-right:68%;}
+.margin-right-69 {margin-right:69%;}
+.margin-right-70 {margin-right:70%;}
+.margin-right-71 {margin-right:71%;}
+.margin-right-72 {margin-right:72%;}
+.margin-right-73 {margin-right:73%;}
+.margin-right-74 {margin-right:74%;}
+.margin-right-75 {margin-right:75%;}
+.margin-right-76 {margin-right:76%;}
+.margin-right-77 {margin-right:77%;}
+.margin-right-78 {margin-right:78%;}
+.margin-right-79 {margin-right:79%;}
+.margin-right-80 {margin-right:80%;}
+.margin-right-81 {margin-right:81%;}
+.margin-right-82 {margin-right:82%;}
+.margin-right-83 {margin-right:83%;}
+.margin-right-84 {margin-right:84%;}
+.margin-right-85 {margin-right:85%;}
+.margin-right-86 {margin-right:86%;}
+.margin-right-87 {margin-right:87%;}
+.margin-right-88 {margin-right:88%;}
+.margin-right-89 {margin-right:89%;}
+.margin-right-90 {margin-right:90%;}
+.margin-right-91 {margin-right:91%;}
+.margin-right-92 {margin-right:92%;}
+.margin-right-93 {margin-right:93%;}
+.margin-right-94 {margin-right:94%;}
+.margin-right-95 {margin-right:95%;}
+.margin-right-96 {margin-right:96%;}
+.margin-right-97 {margin-right:97%;}
+.margin-right-98 {margin-right:98%;}
+.margin-right-99 {margin-right:99%;}
+.margin-right-100 {margin-right:100%;}
+
+
+.margin-top-0 {margin-top:0%;}
+.margin-top-1 {margin-top:1%;}
+.margin-top-2 {margin-top:2%;}
+.margin-top-3 {margin-top:3%;}
+.margin-top-4 {margin-top:4%;}
+.margin-top-5 {margin-top:5%;}
+.margin-top-6 {margin-top:6%;}
+.margin-top-7 {margin-top:7%;}
+.margin-top-8 {margin-top:8%;}
+.margin-top-9 {margin-top:9%;}
+.margin-top-10 {margin-top:10%;}
+.margin-top-11 {margin-top:11%;}
+.margin-top-12 {margin-top:12%;}
+.margin-top-13 {margin-top:13%;}
+.margin-top-14 {margin-top:14%;}
+.margin-top-15 {margin-top:15%;}
+.margin-top-16 {margin-top:16%;}
+.margin-top-17 {margin-top:17%;}
+.margin-top-18 {margin-top:18%;}
+.margin-top-19 {margin-top:19%;}
+.margin-top-20 {margin-top:20%;}
+.margin-top-21 {margin-top:21%;}
+.margin-top-22 {margin-top:22%;}
+.margin-top-23 {margin-top:23%;}
+.margin-top-24 {margin-top:24%;}
+.margin-top-25 {margin-top:25%;}
+.margin-top-26 {margin-top:26%;}
+.margin-top-27 {margin-top:27%;}
+.margin-top-28 {margin-top:28%;}
+.margin-top-29 {margin-top:29%;}
+.margin-top-30 {margin-top:30%;}
+.margin-top-31 {margin-top:31%;}
+.margin-top-32 {margin-top:32%;}
+.margin-top-33 {margin-top:33%;}
+.margin-top-34 {margin-top:34%;}
+.margin-top-35 {margin-top:35%;}
+.margin-top-36 {margin-top:36%;}
+.margin-top-37 {margin-top:37%;}
+.margin-top-38 {margin-top:38%;}
+.margin-top-39 {margin-top:39%;}
+.margin-top-40 {margin-top:40%;}
+.margin-top-41 {margin-top:41%;}
+.margin-top-42 {margin-top:42%;}
+.margin-top-43 {margin-top:43%;}
+.margin-top-44 {margin-top:44%;}
+.margin-top-45 {margin-top:45%;}
+.margin-top-46 {margin-top:46%;}
+.margin-top-47 {margin-top:47%;}
+.margin-top-48 {margin-top:48%;}
+.margin-top-49 {margin-top:49%;}
+.margin-top-50 {margin-top:50%;}
+.margin-top-51 {margin-top:51%;}
+.margin-top-52 {margin-top:52%;}
+.margin-top-53 {margin-top:53%;}
+.margin-top-54 {margin-top:54%;}
+.margin-top-55 {margin-top:55%;}
+.margin-top-56 {margin-top:56%;}
+.margin-top-57 {margin-top:57%;}
+.margin-top-58 {margin-top:58%;}
+.margin-top-59 {margin-top:59%;}
+.margin-top-60 {margin-top:60%;}
+.margin-top-61 {margin-top:61%;}
+.margin-top-62 {margin-top:62%;}
+.margin-top-63 {margin-top:63%;}
+.margin-top-64 {margin-top:64%;}
+.margin-top-65 {margin-top:65%;}
+.margin-top-66 {margin-top:66%;}
+.margin-top-67 {margin-top:67%;}
+.margin-top-68 {margin-top:68%;}
+.margin-top-69 {margin-top:69%;}
+.margin-top-70 {margin-top:70%;}
+.margin-top-71 {margin-top:71%;}
+.margin-top-72 {margin-top:72%;}
+.margin-top-73 {margin-top:73%;}
+.margin-top-74 {margin-top:74%;}
+.margin-top-75 {margin-top:75%;}
+.margin-top-76 {margin-top:76%;}
+.margin-top-77 {margin-top:77%;}
+.margin-top-78 {margin-top:78%;}
+.margin-top-79 {margin-top:79%;}
+.margin-top-80 {margin-top:80%;}
+.margin-top-81 {margin-top:81%;}
+.margin-top-82 {margin-top:82%;}
+.margin-top-83 {margin-top:83%;}
+.margin-top-84 {margin-top:84%;}
+.margin-top-85 {margin-top:85%;}
+.margin-top-86 {margin-top:86%;}
+.margin-top-87 {margin-top:87%;}
+.margin-top-88 {margin-top:88%;}
+.margin-top-89 {margin-top:89%;}
+.margin-top-90 {margin-top:90%;}
+.margin-top-91 {margin-top:91%;}
+.margin-top-92 {margin-top:92%;}
+.margin-top-93 {margin-top:93%;}
+.margin-top-94 {margin-top:94%;}
+.margin-top-95 {margin-top:95%;}
+.margin-top-96 {margin-top:96%;}
+.margin-top-97 {margin-top:97%;}
+.margin-top-98 {margin-top:98%;}
+.margin-top-99 {margin-top:99%;}
+.margin-top-100 {margin-top:100%;}
+
+
+
+.form-element-1{font-size:1.2em;}
+.form-element-2{font-size:2em;}
+@media screen and (max-width:768px) {
+	.form-element-1{font-size:0.9em;}
+	.form-element-2{font-size:2em;}
+}
+@media screen and (max-width:400px) {
+	.form-element-1{font-size:0.8em;}
+	.form-element-2{font-size:2em;}
+}

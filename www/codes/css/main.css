@@ -1,0 +1,110 @@
+/*a:link    {color:green;}
+a:visited {color:green;}
+a:hover   {color:red;}
+a:active */
+
+/* Baslangiç - Her sayfada geçen kisimlar için  */
+body{
+	margin:0px auto;
+	padding:0px;
+	background-color:#fff;
+	width:100%;
+	font-size:1.5em;
+}
+#wrapper{
+	margin:0px auto;
+	padding:0px;
+	/*width:100%;*/
+	/*border:#000 solid 5px;*/
+	/*background:url(../_image/background/bg_blue_50.png) repeat;*/
+}
+
+
+.info-part{
+	border-radius:5px;
+	background: url(../../images/background/bg_black_20.png) repeat;
+	padding:1% 0%;
+	width:84%;
+	margin:1% auto;
+	overflow:auto;
+	padding:3%;
+}
+.info-part-2{
+	border-radius:5px;
+	background: url(../../images/background/bg_green_50.png) repeat;
+	padding:1% 0%;
+	width:50%;
+	margin:5% auto;
+	overflow:auto;
+	padding:3%;
+	text-align:center;
+}
+.info-part-3{
+	border-radius:5px;
+	background: url(../../images/background/bg_black_50.png) repeat;
+	padding:1% 0%;
+	width:90%;
+	margin:2% auto;
+	overflow:auto;
+	padding:3%;
+}
+.info-part-4{
+	border-radius:5px;
+	background: url(../../images/background/bg_blue_50.png) repeat;
+	padding:1% 0%;
+	width:90%;
+	margin:2% auto;
+	overflow:auto;
+	padding:3%;
+	font-size:5em;
+	text-align:center;
+}
+
+.info-part-grid-1{
+	width:35%;
+	float:left;
+}
+.info-part-grid-2{
+	width:30%;
+	float:right;
+	text-align:right;
+	font-size:1.5em;
+}
+
+@media screen and (max-width:450px) {
+	.info-part-grid-1{
+		width:100%;
+		float:left;
+		text-align:center;
+	}
+	.info-part-grid-2{
+		width:100%;
+		float:left;
+		text-align:center;
+	}
+}
+
+
+.info-part-logo{
+	width:1em;
+}
+ 
+ 
+.form-element-1{
+	font-size:0.9em;
+}
+
+
+
+
+
+
+
+/* Baslangiç - Dil ile ilgili */
+
+/* Bitis - Her sayfada geçen kisimlar için  */
+
+
+
+
+
