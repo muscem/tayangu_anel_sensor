@@ -105,7 +105,6 @@ function get_cells_list(){
 		dataType: "xml"
 	})
 	.done(function(r){
-		alert("cem");
 		$("#cell-name").empty();
 		var data;
 		$("#cell-name").append('<option value="0">---</option>');
@@ -315,10 +314,10 @@ function onDeviceReady() {
 	// Now safe to use the PhoneGap API
 	//alert("Device is ready");
 	//$.support.cors=true;
-
+	alert("on device ready 1");
 	document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 	document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
-
+	alert("on device ready 2");
 }
 
 
@@ -330,7 +329,9 @@ function onDeviceReady() {
 
 function onVolumeDownKeyDown() {
     // Handle the volume down button
+	alert("vol down 1");
 	$("#volume").html($("#volume").html()*1-1);
+	alert("vol down 2");
 }
 
 
@@ -338,7 +339,9 @@ function onVolumeDownKeyDown() {
 
 function onVolumeUpKeyDown() {
     // Handle the volume up button
+	alert("vol up 1");
 	$("#volume").html($("#volume").html()*1+1);
+	alert("vol up 2");
 }
 
 
