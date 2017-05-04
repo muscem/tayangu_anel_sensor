@@ -14,7 +14,7 @@
 $( function() {
 });
 
-var xmlDataSendType="POST";//İnternet sitesinde POST, mobil uygulamalarda GET olacak.
+var xmlDataSendType="GET";//İnternet sitesinde POST, mobil uygulamalarda GET olacak.
 
 //xml bağlantıları gibi gerçek siteyle bağlantılı adreserde kullanılacak.
 //var siteUrlAdress="http://localhost/uygulamalar/tayangu/an-el/1";
