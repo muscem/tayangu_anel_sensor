@@ -1,0 +1,89 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+<title>anel</title>
+
+<link rel="stylesheet" href="codes/css/jquery-ui.css">
+<link rel="stylesheet" href="codes/css/mycssframework.css">
+<link rel="stylesheet" href="codes/css/main.css">
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+<script src="codes/js/jquery.js"></script>
+<script src="codes/js/jquery-ui.js"></script>
+<script src="codes/js/functions.js"></script>
+<script src="codes/js/functions_common.js"></script>
+
+
+<style>
+/*div{
+	border:1px solid #000;
+}*/
+</style>
+
+<script>
+function onMainPageLoad(){
+	//on_page_load();
+	//alert(get_storaged_data(sData.serverIP));
+	if(get_storaged_data(sData.serverIP)!=null && get_storaged_data(sData.serverIP)!=""){
+		siteUrlAdress="http://"+get_storaged_data(sData.serverIP)+"/works/an-el/count-sensor/server";
+	}
+	get_cells_list();
+	if(get_storaged_data(sData.serverIP)!=null && get_storaged_data(sData.serverIP)!=""){
+		$("#server-ip").val(get_storaged_data(sData.serverIP));
+	}
+}
+
+
+
+
+function save_settings(){
+	set_storaged_data(sData.serverIP, $("#server-ip").val());	
+	set_storaged_data(sData.cellName, $("#cell-name :selected").text());
+	set_storaged_data(sData.cellID, $("#cell-name :selected").val());
+	siteUrlAdress="http://"+get_storaged_data(sData.serverIP)+"/works/an-el/count-sensor/server";
+	//siteUrlAdress="http://"+$("#server-ip").val()+"/works/an-el/count-sensor/server";
+	//alert(siteUrlAdress);
+	//redirect_page("index.html");
+}
+</script>
+</head>
+<body onLoad="onMainPageLoad();">
+<div id="wrapper" class="unselectable">
+   
+    <div id="header">
+    	<div class="header-icon" onClick="redirect_page('index.html');"><img class="header-icon-image" src="images/arrow-left.png"></div>
+    </div>
+    
+    
+    <div class="grid-100">
+    	<div class="info-part">
+            Hücre Adı :
+            <select name="cell-name" id="cell-name" class="form-element-2" >
+            <option value="1">1</option>
+            </select>
+        </div>
+    </div>
+    
+    
+    <div class="grid-100">
+	    <div class="info-part">
+            Sunucu Ip :
+            <input type="text" name="server-ip" id="server-ip" class="form-element-2" value="192.168.2.30" />
+        </div>
+    </div>
+
+    
+    
+    
+    <div class="grid-100">
+        <div class="info-part-2" onClick="save_settings();">KAYDET</div>
+    </div>
+
+</div>
+<div id="background"><img src="images/anel-logo.jpg" id="background-image"></div>
+</body>
+</html>

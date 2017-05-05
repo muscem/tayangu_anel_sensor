@@ -22,42 +22,47 @@ body{
 
 .info-part{
 	border-radius:5px;
-	background: url(../../images/background/bg_black_20.png) repeat;
+	background: url(../../images/background/bg_black_200.png) repeat;
 	padding:1% 0%;
 	width:84%;
 	margin:1% auto;
 	overflow:auto;
 	padding:3%;
+	color:#fff;
 }
 .info-part-2{
 	border-radius:5px;
-	background: url(../../images/background/bg_green_50.png) repeat;
+	background: url(../../images/background/bg_black_200.png) repeat;
 	padding:1% 0%;
 	width:50%;
 	margin:5% auto;
 	overflow:auto;
 	padding:3%;
 	text-align:center;
+	color:#fff;
 }
 .info-part-3{
 	border-radius:5px;
-	background: url(../../images/background/bg_black_50.png) repeat;
+	background-color:#006;
+	/*background: url(../../images/background/bg_blue_150.png) repeat;*/
 	padding:1% 0%;
 	width:90%;
 	margin:2% auto;
 	overflow:auto;
 	padding:3%;
+	color:#FF0;
 }
 .info-part-4{
 	border-radius:5px;
-	background: url(../../images/background/bg_blue_50.png) repeat;
+	background: url(../../images/background/bg_black_200.png) repeat;
 	padding:1% 0%;
 	width:90%;
 	margin:2% auto;
 	overflow:auto;
 	padding:3%;
-	font-size:5em;
+	font-size:5.5em;
 	text-align:center;
+	color:#FFF;
 }
 
 .info-part-grid-1{
@@ -93,13 +98,42 @@ body{
 .form-element-1{
 	font-size:0.9em;
 }
+@media screen and (max-width:768px) {
+	.form-element-1{
+		margin-top:20px;
+	}
+}
+.form-element-2{
+	font-size:0.9em;
+}
+
+#background{
+	position:fixed;
+	top:100px;
+	left:0px;
+	z-index:-999;
+	width:100%;
+}
+#background-image{
+	width:100%;
+}
+
+#header{
+	width:100%;
+	background-color:#000;
+	overflow:auto;
+}
 
 
-
-
-
-
-
+.header-icon{
+	width:8%;
+	padding:5px;
+	float:left;
+	overflow:auto;
+}
+.header-icon-image{
+	width:100%;
+}
 /* Baslangiç - Dil ile ilgili */
 
 /* Bitis - Her sayfada geçen kisimlar için  */

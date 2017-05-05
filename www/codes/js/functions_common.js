@@ -14,36 +14,38 @@
 $( function() {
 });
 
-var xmlDataSendType="GET";//İnternet sitesinde POST, mobil uygulamalarda GET olacak.
+var xmlDataSendType="POST";//İnternet sitesinde POST, mobil uygulamalarda GET olacak.
 
 //xml bağlantıları gibi gerçek siteyle bağlantılı adreserde kullanılacak.
 //var siteUrlAdress="http://localhost/uygulamalar/tayangu/an-el/1";
-//var siteUrlAdress="http://localhost/works/an-el/count-sensor/server";
-var siteUrlAdress="http://192.168.2.30/works/an-el/count-sensor/server";
-function changeip(){
-	siteUrlAdress=$("#serverip").val();
-}
+var siteUrlAdress="http://localhost/works/an-el/count-sensor/server";
+//var siteUrlAdress="http://192.168.2.30/works/an-el/count-sensor/server";
+
 //var siteUrlAdress="http://www.tayangu.com.tr/anel";
 var xmlsUrl = {
 	"getCellsList":"xmls/xml_cells.php",
 	"getWorkerList":"xmls/xml_people.php",
 	"getControllerList":"xmls/xml_people.php",
-	"getWorkOrdersList":"xmls/xml_work_orders.php"
+	"getWorkOrdersList":"xmls/xml_work_orders.php",
+	"getActiveWorkOrderForCell":"xmls/xml_work_orders.php",
+	"sendCount":"xmls/xml_count.php"
 }
 
 var xmlsString = {
 	"getCellsList":"get-cells-list",
 	"getWorkerList":"get-worker-list",
+	"getActiveWorkOrderForCell":"get-active-work-order-for-cell",
 	"getControllerList":"get-controller-list",
-	"getWorkOrdersList":"get-work-orders-list"
+	"getWorkOrdersList":"get-work-orders-list",
+	"sendCount":"send-count"
 }
 
 
 var sData={//Kaydedilen verilerin adları. Mesela kullanıcı adı ur ismiyle kaydedilecek
-	"workOrder":"workorder",
-	"cell":"cell",
-	"userRemember":"ur",
-	"userLanguage":"ul"
+	"workNo":"workNo",
+	"cellName":"cellName",
+	"cellID":"cellID",
+	"serverIP":"serverIP"
 }
 
 
@@ -105,6 +107,7 @@ function get_cells_list(){
 		dataType: "xml"
 	})
 	.done(function(r){
+		//alert("cem");
 		$("#cell-name").empty();
 		var data;
 		$("#cell-name").append('<option value="0">---</option>');
@@ -115,9 +118,9 @@ function get_cells_list(){
 			
         });
 		
-		if(get_storaged_data("cellName")!=""){
-			$("#cell-name").val(get_storaged_data("cellId")).attr("selected", true);
-			get_work_orders_list();
+		if(get_storaged_data(sData.cellName)!=""){
+			$("#cell-name").val(get_storaged_data(sData.cellID)).attr("selected", true);
+			//get_work_orders_list();
 		}
 	
 	})
@@ -308,43 +311,86 @@ function set_work_order(){
 
 
 
+function get_active_work_order_for_cell(){
+	if(get_storaged_data(sData.cellID)>0){
+		$.ajax({
+			async: false,		
+			type: xmlDataSendType,
+			crossDomain: true,
+			url: siteUrlAdress+"/"+xmlsUrl.getActiveWorkOrderForCell,
+			timeout: 260000,
+			data: {/*un:userPref.uName,
+					p:userPref.uPassword,*/
+					s:xmlsString.getActiveWorkOrderForCell,
+					/*y:y,
+					m:m,
+					d:d*/
+					c:get_storaged_data(sData.cellID)
+				},
+			dataType: "xml"
+		})
+		.done(function(r){
+			$(r).find('result').each(function(index, element) {
+				$("#work-no-label").html($(this).find('name').text());
+				$("#count-label").html($(this).find('count').text());
+			});
+		})
+		.fail(function(){
+			//if(pages.login!=find_page_name()) open_page(pages.login,"");
+			//alert(messages[userPref.lang][2]);
+		});
+	}
+}
+
+
+
+
 // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 //
 function onDeviceReady() {
 	// Now safe to use the PhoneGap API
 	//alert("Device is ready");
 	//$.support.cors=true;
-	alert("on device ready 1");
+
+	
+	//xmlDataSendType="GET";
 	document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 	document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
-	alert("on device ready 2");
 }
-
-
-
-
-
-
-
 
 function onVolumeDownKeyDown() {
     // Handle the volume down button
-	alert("vol down 1");
-	$("#volume").html($("#volume").html()*1-1);
-	alert("vol down 2");
+	$("#count-label").html($("#count-label").html()*1-1);
 }
-
-
-
 
 function onVolumeUpKeyDown() {
     // Handle the volume up button
-	alert("vol up 1");
-	$("#volume").html($("#volume").html()*1+1);
-	alert("vol up 2");
+	$("#count-label").html($("#count-label").html()*1+1);
 }
 
-
+function send_count_to_server(){
+	var c=$("#count-label").html();
+	$.ajax({
+		async: false,		
+		type: xmlDataSendType,
+		crossDomain: true,
+		url: siteUrlAdress+"/"+xmlsUrl.sendCount,
+		timeout: 260000,
+		data: {/*un:userPref.uName,
+				p:userPref.uPassword,*/
+				s:xmlsString.getCellsList,
+				c:c
+			},
+		dataType: "xml"
+	})
+	.done(function(r){
+	
+	})
+	.fail(function(){
+		//if(pages.login!=find_page_name()) open_page(pages.login,"");
+		//alert(messages[userPref.lang][2]);
+	});
+}
 
 
 
@@ -441,7 +487,6 @@ var elementsName={
 	"searchAdvancedMorningNote":"xmls/mobile/xml_morning_notes.php",
 	"getMorningNoteToShow":"xmls/mobile/xml_morning_notes.php"
 }*/
-
 
 
 

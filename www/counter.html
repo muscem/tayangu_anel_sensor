@@ -20,7 +20,8 @@
 function onMainPageLoad(){
 	//on_page_load();
 	$("#cell-name-label").html(get_storaged_data("cellName"));
-	$("#work-order-label").html(get_storaged_data("workOrderName"));
+	get_active_work_order_for_cell();
+	//$("#work-no-label").html(get_storaged_data("workNo"));
 	startTime();	
 }
 function goto_index(){
@@ -51,19 +52,11 @@ function say(){
 </head>
 <body onLoad="onMainPageLoad();">
 <div id="wrapper" class="unselectable">
-    <div class="grid-100 content-center">
-	    <div class="grid2-30" style="margin:0px 35%;">
-    		<img src="images/anel-logo.jpg" width="100%">
-        </div>
-    </div>
-    
-    
-    
     
     <div class="grid-100">
     	<div class="info-part-3">
         	<span id="cell-name-label" class="info-part-grid-1"></span> 
-            <span id="work-order-label" class="info-part-grid-1"></span>
+            <span id="work-no-label" class="info-part-grid-1"></span>
             <span id="time-label" class="info-part-grid-2"></span>
         </div>
     </div>
@@ -81,10 +74,9 @@ function say(){
     </div>
     
     
-    <div class="grid-100" onClick="say();">say</div>
+    <!--<div class="grid-100" onClick="say();">say</div>-->
     
-
-
+<div id="background"><img src="images/anel-logo.jpg" id="background-image"></div>
 </div>
 </body>
 </html>

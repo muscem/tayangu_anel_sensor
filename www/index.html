@@ -1,15 +1,23 @@
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
 <title>anel</title>
+
 <link rel="stylesheet" href="codes/css/jquery-ui.css">
 <link rel="stylesheet" href="codes/css/mycssframework.css">
 <link rel="stylesheet" href="codes/css/main.css">
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
 <script src="codes/js/jquery.js"></script>
 <script src="codes/js/jquery-ui.js"></script>
 <script src="codes/js/functions.js"></script>
 <script src="codes/js/functions_common.js"></script>
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+
 <style>
 /*div{
 	border:1px solid #000;
@@ -19,19 +27,45 @@
 <script>
 function onMainPageLoad(){
 	//on_page_load();
-	//get_cells_list();
-	document.addEventListener("deviceready", onDeviceReady, false);
+	startTime();
+	if(get_storaged_data(sData.serverIP)!=null && get_storaged_data(sData.serverIP)!=""){
+		siteUrlAdress="http://"+get_storaged_data(sData.serverIP)+"/works/an-el/count-sensor/server";
+	}
+	if(get_storaged_data(sData.cellName)!=null && get_storaged_data(sData.cellName)!=""){
+		$("#cell-name-label").html(get_storaged_data(sData.cellName));
+	}
+	get_active_work_order_for_cell();
 }
 function yap(){
 	//$("#cell-name").val("3").attr("selected", true);
 }
 
 
-function goto_sayac(){
-	/*set_storaged_data("cell", $("#cell-name :selected").text());
-	set_storaged_data("workOrder", $("#work-order :selected").text());*/
-	redirect_page("sayac.html");
+function goto_counter(){
+	/*set_storaged_data("cell", $("#cell-name :selected").text());*/
+	set_storaged_data("workNo", $("#work-no").val());
+	redirect_page("counter.html");
 }
+
+
+
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time-label').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
 </script>
 </head>
 <body onLoad="onMainPageLoad();">
@@ -39,44 +73,43 @@ function goto_sayac(){
 
 <!--<a href="#" onClick="yap();">Yap</a>
 <a href="#" onClick="adda();">Ekle</a>-->
-    <div class="grid-100 content-center">
+    <!--<div class="grid-100 content-center">
 	    <div class="grid2-30" style="margin:0px 35%;">
     		<img src="images/anel-logo.jpg" width="100%">
         </div>
+    </div>-->
+    
+    <div id="header">
+    	<div class="header-icon" onClick="redirect_page('settings.html');"><img class="header-icon-image" src="images/settings.png"></div>
+        <div class="header-icon" onClick="get_active_work_order_for_cell();"><img class="header-icon-image" src="images/refresh.png"></div>
     </div>
     
-    
-    
-    
+       
     <div class="grid-100">
-    	<div class="info-part">
-            <div class="grid-20">
-                Hücre Adı :
-            </div>
-            <div class="margin-left-5">
-                <select name="cell-name" id="cell-name" class="form-element-1" onChange="get_work_orders_list();">
-                <option value="1">1</option>
-                </select>
-            </div>
+	    <div class="info-part">            
+            <span id="cell-name-label" class="info-part-grid-1"></span> 
+            <span id="time-label" class="info-part-grid-2"></span>
         </div>
     </div>
     
-    
     <div class="grid-100">
+	    <div class="info-part">            
+            <span id="work-no-label" class="info-part-grid-1"></span>
+            <span id="count-label" class="info-part-grid-2"></span>
+        </div>
+    </div>
+    
+    <!--<div class="grid-100">
 	    <div class="info-part">
-            <div class="grid-20">
-                İş Emri :
-            </div>
-            <div class="margin-left-5">
-            	<input type="text" name="work-no" id="work-no" />
+        	İş Emri :
+            <input type="text" name="work-no" id="work-no" />
                 <select name="work-order" id="work-order" class="form-element-1" onChange="set_work_order();" style="display:none">
                 </select>
-            </div>
         </div>
-    </div>
+    </div>-->
     
     
-    <div class="grid-100">
+    <!--<div class="grid-100">
     	<div class="info-part">
             <div class="grid-100">
                 Kontrolcüler :
@@ -97,12 +130,12 @@ function goto_sayac(){
             <div class="grid-100" id="worker-list">
             </div>
         </div>
-    </div>
+    </div>-->
     
     
     
     <div class="grid-100">
-        <div class="info-part-2" onClick="goto_sayac();">BAŞLA
+        <div class="info-part-2" onClick="goto_counter();">BAŞLA
         </div>
     </div>
     
@@ -112,8 +145,7 @@ function goto_sayac(){
 
 
 </div>
-<div id="volume">0</div>
-<input type="text" id="serverip" name="serverip" value="http://192.168.2.30/works/an-el/count-sensor/server">
-<input type="button" value="IP değiştir" onClick="changeip();">
+
+
 </body>
 </html>
