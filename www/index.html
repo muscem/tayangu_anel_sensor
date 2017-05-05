@@ -32,6 +32,7 @@ function onMainPageLoad(){
 		siteUrlAdress="http://"+get_storaged_data(sData.serverIP)+"/works/an-el/count-sensor/server";
 	}
 	if(get_storaged_data(sData.cellName)!=null && get_storaged_data(sData.cellName)!=""){
+		$("#department-name-label").html(get_storaged_data(sData.departmentName));
 		$("#cell-name-label").html(get_storaged_data(sData.cellName));
 	}
 	get_active_work_order_for_cell();
@@ -86,9 +87,14 @@ function checkTime(i) {
     
        
     <div class="grid-100">
-	    <div class="info-part">            
-            <span id="cell-name-label" class="info-part-grid-1"></span> 
-            <span id="time-label" class="info-part-grid-2"></span>
+	    <div class="info-part">  
+        	<div class="info-part-grid-1">
+                <span id="department-name-label"></span><br>
+                <span id="cell-name-label"></span><br>
+            </div>
+            <div class="info-part-grid-2">
+	            <span id="time-label"></span>
+            </div>
         </div>
     </div>
     
@@ -146,6 +152,6 @@ function checkTime(i) {
 
 </div>
 
-
+<div id="background"><img src="images/anel-logo.jpg" id="background-image"></div>
 </body>
 </html>

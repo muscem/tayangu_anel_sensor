@@ -32,14 +32,15 @@ body{
 }
 .info-part-2{
 	border-radius:5px;
-	background: url(../../images/background/bg_black_200.png) repeat;
+	background: url(../../images/background/bg_green_200.png) repeat;
 	padding:1% 0%;
-	width:50%;
+	width:30%;
 	margin:5% auto;
 	overflow:auto;
 	padding:3%;
 	text-align:center;
-	color:#fff;
+	color:#633;
+	font-weight:bold;
 }
 .info-part-3{
 	border-radius:5px;
@@ -60,20 +61,33 @@ body{
 	margin:2% auto;
 	overflow:auto;
 	padding:3%;
-	font-size:5.5em;
+	font-size:6em;
 	text-align:center;
 	color:#FFF;
 }
+.info-part-5{
+	border-radius:5px;
+	background: url(../../images/background/bg_red_200.png) repeat;
+	padding:1% 0%;
+	width:30%;
+	margin:5% auto;
+	overflow:auto;
+	padding:3%;
+	text-align:center;
+	color:#633;
+	font-weight:bold;
+}
+
 
 .info-part-grid-1{
-	width:35%;
+	width:50%;
 	float:left;
 }
 .info-part-grid-2{
-	width:30%;
+	width:50%;
 	float:right;
 	text-align:right;
-	font-size:1.5em;
+	font-size:2.5em;
 }
 
 @media screen and (max-width:450px) {

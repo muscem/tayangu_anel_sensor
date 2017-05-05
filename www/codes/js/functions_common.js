@@ -28,7 +28,8 @@ var xmlsUrl = {
 	"getControllerList":"xmls/xml_people.php",
 	"getWorkOrdersList":"xmls/xml_work_orders.php",
 	"getActiveWorkOrderForCell":"xmls/xml_work_orders.php",
-	"sendCount":"xmls/xml_count.php"
+	"sendCount":"xmls/xml_count.php",
+	"getDepartmentsList":"xmls/xml_departments.php"
 }
 
 var xmlsString = {
@@ -37,7 +38,8 @@ var xmlsString = {
 	"getActiveWorkOrderForCell":"get-active-work-order-for-cell",
 	"getControllerList":"get-controller-list",
 	"getWorkOrdersList":"get-work-orders-list",
-	"sendCount":"send-count"
+	"sendCount":"send-count",
+	"getDepartmentsList":"get-departments-list"
 }
 
 
@@ -45,7 +47,9 @@ var sData={//Kaydedilen verilerin adları. Mesela kullanıcı adı ur ismiyle ka
 	"workNo":"workNo",
 	"cellName":"cellName",
 	"cellID":"cellID",
-	"serverIP":"serverIP"
+	"serverIP":"serverIP",
+	"departmentID":"departmentID",
+	"departmentName":"departmentName"
 }
 
 
@@ -91,8 +95,46 @@ function redirect_page(u){
 	window.location.replace(u);
 }
 
+function get_departments_list(){
+	//alert(siteUrlAdress+"/"+xmlsUrl.getCellsList);
+	$.ajax({
+		async: false,		
+		type: xmlDataSendType,
+		crossDomain: true,
+		url: siteUrlAdress+"/"+xmlsUrl.getDepartmentsList,
+		timeout: 260000,
+		data: {/*un:userPref.uName,
+				p:userPref.uPassword,*/
+				s:xmlsString.getDepartmentsList
+			},
+		dataType: "xml"
+	})
+	.done(function(r){
+		//alert("cem");
+		$("#department-name").empty();
+		var data;
+		$("#department-name").append('<option value="0">---</option>');
+		$(r).find('result').each(function(index, element) {
+			data='<option value="'+$(this).find('id').text()+'">'+$(this).find('name').text()+'</option>';
+			
+			$("#department-name").append(data);
+			
+        });
+		
+		if(get_storaged_data(sData.departmentID)>0){
+			$("#department-name").val(get_storaged_data(sData.departmentID)).attr("selected", true);
+			get_cells_list(get_storaged_data(sData.departmentID));
+		}
+	
+	})
+	.fail(function(){
+		//if(pages.login!=find_page_name()) open_page(pages.login,"");
+		//alert(messages[userPref.lang][2]);
+	});
+	//stop_search();
+}
 
-function get_cells_list(){
+function get_cells_list(d){
 	//alert(siteUrlAdress+"/"+xmlsUrl.getCellsList);
 	$.ajax({
 		async: false,		
@@ -102,7 +144,8 @@ function get_cells_list(){
 		timeout: 260000,
 		data: {/*un:userPref.uName,
 				p:userPref.uPassword,*/
-				s:xmlsString.getCellsList
+				s:xmlsString.getCellsList,
+				d:d
 			},
 		dataType: "xml"
 	})
@@ -119,6 +162,7 @@ function get_cells_list(){
         });
 		
 		if(get_storaged_data(sData.cellName)!=""){
+			//alert(get_storaged_data(sData.cellID));
 			$("#cell-name").val(get_storaged_data(sData.cellID)).attr("selected", true);
 			//get_work_orders_list();
 		}

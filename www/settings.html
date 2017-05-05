@@ -31,23 +31,35 @@ function onMainPageLoad(){
 	if(get_storaged_data(sData.serverIP)!=null && get_storaged_data(sData.serverIP)!=""){
 		siteUrlAdress="http://"+get_storaged_data(sData.serverIP)+"/works/an-el/count-sensor/server";
 	}
-	get_cells_list();
+	get_departments_list();
 	if(get_storaged_data(sData.serverIP)!=null && get_storaged_data(sData.serverIP)!=""){
 		$("#server-ip").val(get_storaged_data(sData.serverIP));
 	}
+	
 }
 
 
 
 
 function save_settings(){
-	set_storaged_data(sData.serverIP, $("#server-ip").val());	
+	set_storaged_data(sData.departmentName, $("#department-name :selected").text());
+	set_storaged_data(sData.departmentID, $("#department-name :selected").val());
 	set_storaged_data(sData.cellName, $("#cell-name :selected").text());
 	set_storaged_data(sData.cellID, $("#cell-name :selected").val());
+	set_storaged_data(sData.serverIP, $("#server-ip").val());
 	siteUrlAdress="http://"+get_storaged_data(sData.serverIP)+"/works/an-el/count-sensor/server";
+	
 	//siteUrlAdress="http://"+$("#server-ip").val()+"/works/an-el/count-sensor/server";
 	//alert(siteUrlAdress);
 	//redirect_page("index.html");
+	alert("Ayarlar Kaydedildi");
+}
+
+
+function get_cells_list_for_department(){
+	if($("#department-name :selected").val()>0){
+		get_cells_list($("#department-name :selected").val());
+	}
 }
 </script>
 </head>
@@ -61,9 +73,19 @@ function save_settings(){
     
     <div class="grid-100">
     	<div class="info-part">
-            Hücre Adı :
+            Bölüm :
+            <select name="department-name" id="department-name" class="form-element-2" onChange="get_cells_list_for_department();">
+            <option value="0">---</option>
+            </select>
+        </div>
+    </div>
+    
+    
+    <div class="grid-100">
+    	<div class="info-part">
+            Hücre :
             <select name="cell-name" id="cell-name" class="form-element-2" >
-            <option value="1">1</option>
+            <option value="0">---</option>
             </select>
         </div>
     </div>
@@ -72,7 +94,7 @@ function save_settings(){
     <div class="grid-100">
 	    <div class="info-part">
             Sunucu Ip :
-            <input type="text" name="server-ip" id="server-ip" class="form-element-2" value="192.168.2.30" />
+            <input type="text" name="server-ip" id="server-ip" class="form-element-2" value="localhost" />
         </div>
     </div>
 
